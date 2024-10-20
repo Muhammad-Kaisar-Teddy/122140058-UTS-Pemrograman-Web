@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Tabel - Idola Saya</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        /* CSS untuk Navbar Sidebar */
+        .sidebar {
+            background-color: #2f3031;
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        .sidebar .nav-link {
+            color: #eee2e2;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .nav-link:hover {
+            color: #007bff; /* Warna teks saat dihover */
+            background-color: #e9ecef; /* Latar belakang saat dihover */
+            border-radius: 5px;
+        }
+
+        .sidebar .nav-link.active {
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            padding: 20px;
+            background-color: #ffffff;
+            min-height: 100vh;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        /* Table Styling */
+        .table-container {
+            max-height: 400px; /* Batas tinggi untuk membuat tabel scrollable */
+            overflow-y: auto; /* Membuat tabel bisa di-scroll */
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1; /* Efek hover pada tabel */
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        /* Zebra Stripes for Even Rows */
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        /* Header Style */
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .sidebar {
+                height: auto;
+                padding-bottom: 20px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Halaman Tabel</h1>
+    </header>
+
+    <!-- Kontainer Utama -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Halaman Utama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulir.html">Halaman Formulir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tabel.html">Halaman Tabel</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 main-content">
+                <h2>Daftar Idola</h2>
+                <div class="table-container">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-primary sticky-header">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Idola</th>
+                                <th>Profesi</th>
+                                <th>Negara</th>
+                                <th>Tahun Lahir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data Dummy 50 baris -->
+                            <tbody>
+                                <tr><td>1</td><td>Al-Farabi</td><td>Filsuf</td><td>Kazakhstan</td><td>872</td></tr>
+                                <tr><td>2</td><td>Al-Kindi</td><td>Filsuf, Ilmuwan</td><td>Irak</td><td>801</td></tr>
+                                <tr><td>3</td><td>Al-Razi</td><td>Dokter, Kimiawan</td><td>Iran</td><td>865</td></tr>
+                                <tr><td>4</td><td>Al-Khwarizmi</td><td>Matematikawan</td><td>Uzbekistan</td><td>780</td></tr>
+                                <tr><td>5</td><td>Ibn Sina</td><td>Dokter, Filsuf</td><td>Uzbekistan</td><td>980</td></tr>
+                                <tr><td>6</td><td>Ibn Rushd</td><td>Filsuf, Dokter</td><td>Spanyol</td><td>1126</td></tr>
+                                <tr><td>7</td><td>Al-Ghazali</td><td>Teolog, Filsuf</td><td>Iran</td><td>1058</td></tr>
+                                <tr><td>8</td><td>Jabir Ibn Hayyan</td><td>Kimiawan</td><td>Iran</td><td>721</td></tr>
+                                <tr><td>9</td><td>Al-Battani</td><td>Astronom, Matematikawan</td><td>Syria</td><td>858</td></tr>
+                                <tr><td>10</td><td>Al-Zahrawi</td><td>Ahli Bedah</td><td>Spanyol</td><td>936</td></tr>
+                                <tr><td>11</td><td>Ibn Khaldun</td><td>Sosiolog, Sejarawan</td><td>Tunesia</td><td>1332</td></tr>
+                                <tr><td>12</td><td>Ibn Al-Haytham</td><td>Fisikawan, Matematikawan</td><td>Irak</td><td>965</td></tr>
+                                <tr><td>13</td><td>Al-Masudi</td><td>Sejarawan, Geograf</td><td>Irak</td><td>896</td></tr>
+                                <tr><td>14</td><td>Al-Biruni</td><td>Astronom, Matematikawan</td><td>Iran</td><td>973</td></tr>
+                                <tr><td>15</td><td>Ibn Tufail</td><td>Filsuf</td><td>Spanyol</td><td>1105</td></tr>
+                                <tr><td>16</td><td>Ibn Bajjah</td><td>Filsuf, Dokter</td><td>Spanyol</td><td>1085</td></tr>
+                                <tr><td>17</td><td>Nasir al-Din al-Tusi</td><td>Astronom, Matematikawan</td><td>Iran</td><td>1201</td></tr>
+                                <tr><td>18</td><td>Omar Khayyam</td><td>Matematikawan, Astronom</td><td>Iran</td><td>1048</td></tr>
+                                <tr><td>19</td><td>Ibn Ishaq</td><td>Sejarawan</td><td>Arab Saudi</td><td>704</td></tr>
+                                <tr><td>20</td><td>Al-Idrisi</td><td>Geograf</td><td>Maroko</td><td>1100</td></tr>
+                                <tr><td>21</td><td>Ibn Battuta</td><td>Penjelajah</td><td>Maroko</td><td>1304</td></tr>
+                                <tr><td>22</td><td>Ibn Qayyim al-Jawziyya</td><td>Teolog</td><td>Arab Saudi</td><td>1292</td></tr>
+                                <tr><td>23</td><td>Al-Mawardi</td><td>Ahli Hukum</td><td>Irak</td><td>972</td></tr>
+                                <tr><td>24</td><td>Ibn Hazm</td><td>Teolog, Filsuf</td><td>Spanyol</td><td>994</td></tr>
+                                <tr><td>25</td><td>Al-Farghani</td><td>Astronom</td><td>Uzbekistan</td><td>805</td></tr>
+                                <tr><td>26</td><td>Ibn Zuhr</td><td>Dokter</td><td>Spanyol</td><td>1091</td></tr>
+                                <tr><td>27</td><td>Ibn Kathir</td><td>Sejarawan</td><td>Syria</td><td>1300</td></tr>
+                                <tr><td>28</td><td>Ibn Majah</td><td>Ulama Hadis</td><td>Iran</td><td>824</td></tr>
+                                <tr><td>29</td><td>Al-Damiri</td><td>Zoologis</td><td>Mesir</td><td>1341</td></tr>
+                                <tr><td>30</td><td>Al-Kindi</td><td>Filsuf</td><td>Irak</td><td>801</td></tr>
+                                <tr><td>31</td><td>Al-Nafis</td><td>Dokter</td><td>Mesir</td><td>1213</td></tr>
+                                <tr><td>32</td><td>Al-Farisi</td><td>Matematikawan</td><td>Iran</td><td>1260</td></tr>
+                                <tr><td>33</td><td>Ibn al-Nafis</td><td>Ahli Bedah</td><td>Suriah</td><td>1213</td></tr>
+                                <tr><td>34</td><td>Al-Khazini</td><td>Astronom, Fisikawan</td><td>Turkmenistan</td><td>1115</td></tr>
+                                <tr><td>35</td><td>Al-Muqaddasi</td><td>Geograf</td><td>Palestina</td><td>945</td></tr>
+                                <tr><td>36</td><td>Al-Jahiz</td><td>Penulis, Zoolog</td><td>Irak</td><td>776</td></tr>
+                                <tr><td>37</td><td>Al-Khwarizmi</td><td>Matematikawan</td><td>Uzbekistan</td><td>780</td></tr>
+                                <tr><td>38</td><td>Ibn Yunus</td><td>Astronom</td><td>Mesir</td><td>950</td></tr>
+                                <tr><td>39</td><td>Abu Ma'shar al-Balkhi</td><td>Astronom</td><td>Afghanistan</td><td>787</td></tr>
+                                <tr><td>40</td><td>Ibn al-Baitar</td><td>Botanis</td><td>Spanyol</td><td>1197</td></tr>
+                                <tr><td>41</td><td>Al-Jazari</td><td>Insinyur</td><td>Turki</td><td>1136</td></tr>
+                                <tr><td>42</td><td>Ibn Jubayr</td><td>Penjelajah</td><td>Spanyol</td><td>1145</td></tr>
+                                <tr><td>43</td><td>Ibn Sina</td><td>Dokter</td><td>Uzbekistan</td><td>980</td></tr>
+                                <tr><td>44</td><td>Ibn Arabi</td><td>Filsuf</td><td>Spanyol</td><td>1165</td></tr>
+                                <tr><td>45</td><td>Ibn Bajja</td><td>Filsuf</td><td>Spanyol</td><td>1085</td></tr>
+                                <tr><td>46</td><td>Shams Tabrizi</td><td>Penyair</td><td>Iran</td><td>1185</td></tr>
+                                <tr><td>47</td><td>Al-Tirmidzi</td><td>Ulama Hadis</td><td>Uzbekistan</td><td>824</td></tr>
+                                <tr><td>48</td><td>Ibn Abi Usaybi'a</td><td>Sejarawan Kedokteran</td><td>Suriah</td><td>1194</td></tr>
+                                <tr><td>49</td><td>Al-Farabi</td><td>Filsuf</td><td>Kazakhstan</td><td>872</td></tr>
+                                <tr><td>50</td><td>Al-Biruni</td><td>Matematikawan</td><td>Iran</td><td>973</td></tr>
+                            </tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
